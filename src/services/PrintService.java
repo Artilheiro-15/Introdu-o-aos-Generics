@@ -3,15 +3,16 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintService {
+//Agora a minha class esta parametrizada com um certo tipo T
+public class PrintService<T> {
 
-  private List<Object> list = new ArrayList<>();
+  private List<T> list = new ArrayList<>();
 
-  public void addValue(Object value) {
+  public void addValue(T value) {
     list.add(value);
   }
 
-  public Object first() {
+  public T first() {
     if (list.isEmpty()) {
       throw new IllegalStateException("List is empty");
     }
